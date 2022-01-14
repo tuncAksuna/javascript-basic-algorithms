@@ -117,7 +117,7 @@ function selectionSort(_array) {
 
 function swap(arr, x, y) {
     /**
-     * x = min ,  y = value of first for loop
+     * @description - x = min ,  y = value of first for loop
      */
     var temp = arr[x];
     arr[x] = arr[y];

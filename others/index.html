@@ -26,24 +26,6 @@
 
     </table>
     <p id="tablecontent"></p>
-    <script>
-        function checkFun() {
-            var n1 = document.getElementById("tableData").rows.length;
-            var i = 0,
-                j = 0;
-            var str = "";
-
-            for (i = 0; i < n1; i++) {
-                var n2 = document.getElementById("tableData").rows[i].cells;
-                for (j = 0; j < n2.length; j++) {
-                    var x = document.getElementById("tableData").rows[i].cells.item(j).innerHTML;
-                    str = str + x + ":";
-                }
-                str = str + "#";
-            }
-            document.getElementById("tablecontent").innerHTML = str;
-        }
-    </script>
 </body>
 <script src="app.js"></script>
 

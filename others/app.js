@@ -17,23 +17,21 @@ var library = [
     }
 ];
 
+checkFun()
 
+function checkFun() {
+    var n1 = document.getElementById("tableData").rows.length;
+    var i = 0,
+        j = 0;
+    var str = "";
 
-var myArray = [102, 3102, 3, 41, 2, 31];
-
-window.onload = function() {
-    for (var i = 0; i < myArray.length - 1; i++) {
-        var min = i;
-        for (var j = i + 1; j < myArray.length; j++) {
-            if (myArray[j] < myArray[min]) {
-                min = j;
-            }
+    for (i = 0; i < n1; i++) {
+        var n2 = document.getElementById("tableData").rows[i].cells;
+        for (j = 0; j < n2.length; j++) {
+            var x = document.getElementById("tableData").rows[i].cells.item(j).innerHTML;
+            str = str + x + ":";
         }
-        if (min != i) {
-            var tmp = myArray[i];
-            myArray[i] = myArray[min];
-            myArray[min] = tmp;
-        }
+        str = str + "#";
     }
-    console.log(myArray);
-};
+    document.getElementById("tablecontent").innerHTML = str;
+}
