@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma soruları</title>
+</head>
+
+<body>
+
+    <table id="tableData">
+        <tr>
+            <td>37</td>
+            <td>46</td>
+            <td>3</td>
+            <td>64</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>4</td>
+            <td>7</td>
+            <td>21</td>
+        </tr>
+
+    </table>
+    <p id="tablecontent"></p>
+    <script>
+        function checkFun() {
+            var n1 = document.getElementById("tableData").rows.length;
+            var i = 0,
+                j = 0;
+            var str = "";
+
+            for (i = 0; i < n1; i++) {
+                var n2 = document.getElementById("tableData").rows[i].cells;
+                for (j = 0; j < n2.length; j++) {
+                    var x = document.getElementById("tableData").rows[i].cells.item(j).innerHTML;
+                    str = str + x + ":";
+                }
+                str = str + "#";
+            }
+            document.getElementById("tablecontent").innerHTML = str;
+        }
+    </script>
+</body>
+<script src="app.js"></script>
+
+</html>
