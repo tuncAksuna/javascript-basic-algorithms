@@ -137,33 +137,6 @@ const insertion = (_givenArr => {
 });
 // console.log(insertion([40, 10, 30, 201, 21]));
 
-
-//! AHMETİN İŞ ...
-// 1 saatin altında şu kadar "dakika" önce , 1 saatin üstündeyse 2 saat önce vs desin
-// 1 gün önceyse yesterday + saat , 1 günden fazla direkt gün ay yıl saat
-
-function parseTime(unixTime) {
-
-    const currentDate = new Date();
-    const dataDate = new Date(unixTime * 1000);
-
-    var seconds = Math.floor((new Date() - unixTime) / 1000);
-    var interval = seconds / 31536000;
-    interval = seconds / 60;
-
-    if (interval >= 1) {
-        console.log("data sendend " + Math.floor(interval) + " minutes ago ");
-        return currentDate.getHours() - dataDate.getHours() + " hour(s) ago";
-
-    } else if (interval > 0 && interval <= 1) {
-        console.log(`data sended  ${currentDate.getHours() - dataDate.getHours()} hour(s) ago`);
-        return currentDate.getHours() - dataDate.getHours() + " hour(s) ago";
-    }
-}
-
-
-
-
 function parseTime(unixTime) {
 
     const currentDate = new Date();
