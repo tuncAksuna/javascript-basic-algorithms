@@ -1,3 +1,8 @@
+/**
+ * @author - tunCode
+ * @description - basic algorithm solves..
+ */
+
 var myArr = [1, 2, 3, 4, 5];
 
 function addOrRemoveElementFromArray(_id) {
@@ -137,6 +142,8 @@ const insertion = (_givenArr => {
 });
 // console.log(insertion([40, 10, 30, 201, 21]));
 
+
+//! Parse time function
 function parseTime(unixTime) {
 
     const currentDate = new Date();
@@ -157,5 +164,5 @@ function parseTime(unixTime) {
     }
 }
 
-console.log(parseTime(new Date(Date.now() - 31536000 * 20))); // minutes -> gün*20 = 1 gün 20 dk olmuş
-console.log(parseTime(new Date(Date.now() - 31536000))); // -> bir gün
+console.log(parseTime(new Date(Date.now() - 31536000 * 20))); // minutes -> day*20 = one day plus twenty minutes
+console.log(parseTime(new Date(Date.now() - 31536000))); // -> one day
